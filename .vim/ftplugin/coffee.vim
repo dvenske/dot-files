@@ -219,3 +219,5 @@ command! -range=% -bar -nargs=* -complete=customlist,s:CoffeeCompileComplete
 \        CoffeeCompile call s:CoffeeCompile(<line1>, <line2>, <q-args>)
 " Run some CoffeeScript.
 command! -range=% -bar CoffeeRun <line1>,<line2>:w !coffee -s
+
+match ErrorMsg '\%>79v.\+'
