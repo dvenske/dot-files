@@ -13,7 +13,7 @@ export SAVEHIST=1000000
 export LESSHISTFILE="-"
 export PAGER="less"
 export READNULLCMD="${PAGER}"
-export EDITOR="vim"
+export EDITOR="open -a MacVim"
 export BROWSER="firefox"
 export XTERM="urxvtc"
 export RSYNC_PROXY="localhost:8118"
@@ -43,32 +43,38 @@ alias grep="grep --color=always"
 alias ls='pwd;ls -la'
 alias c='clear'
 alias rfind='find . | xargs grep -i -s'
-alias balls='say balls'
 alias vim="open -a MacVim"
 alias rcoffeelint="find . -name '*.coffee' | xargs coffeelint"
 alias todo="find . | xargs grep -i -s todo"
-alias tester="nodey-tools test"
-alias testerc="nodey-tools test-client"
-alias buildc="nodey-tools build-client"
+alias rm="rm -rf"
 # }}}
 
+# {{{ nodey-tools aliases
+alias testr="c;nodey-tools test"
+alias testc="c;nodey-tools test-client"
+alias tests="c;nodey-tools test-server"
+
+alias build="nodey-tools build"
+alias buildc="nodey-tools build-client"
+
+alias clean="nodey-tools clean"
+alias requirements="nodey-tools requirements"
+alias serve="nodey-tools serve"
+alias list="nodey-tools list"
+# }}}
+
+
 # {{{ Git Aliases
-alias gitm="git merge --no-ff --no-commit"
+alias status="git status"
+alias master="git checkout master"
+alias pull="git pull"
+alias pullm="git pull origin master"
+alias push="git push"
+alias pushm="git push origin master"
 
 # }}}
 # {{{ Completion
 compctl -k "(add delete draft edit list import preview publish update)" nb
-# }}}
-
-# {{{ Virtualenv wrapper
-# {{{ Virtualenv
-export WORKON_HOME=$HOME/Work/virtualenvs
-export VIRTUALENVWRAPPER_LOG_DIR="$WORKON_HOME"
-export VIRTUALENVWRAPPER_HOOK_DIR="$WORKON_HOME"
-source /usr/local/bin/virtualenvwrapper.sh
-export PIP_DOWNLOAD_CACHE=$HOME/Work/.pip/cache
-# }}}
-# }}}
 # }}}
 
 # {{{ ZSH settings
