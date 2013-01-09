@@ -1,8 +1,4 @@
 # -*- shell-script -*-
-#
-# anrxc's init file for Z-SHELL 4.3.10 on Arch GNU/Linux.
-# http://sysphere.org/~anrxc/
-# modified by Danny Navarro
 
 # {{{ User settings
 
@@ -15,7 +11,6 @@ export PAGER="less"
 export READNULLCMD="${PAGER}"
 export BROWSER="firefox"
 export XTERM="urxvtc"
-export RSYNC_PROXY="localhost:8118"
 export PATH="/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/bin:/usr/local/graphviz-2.14/bin:$PATH"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export LD_LIBRARY_PATH=/usr/local/lib:/opt/local/lib
