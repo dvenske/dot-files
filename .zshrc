@@ -45,8 +45,13 @@ alias rm="rm -rf"
 # {{{ Git Aliases
 alias status="git status"
 alias pull="git pull"
-
 # }}}
+
+# {{{ SevOne Aliases
+alias api="php /SevOneNMS/personal/mlittrell/api_test.php"
+alias rebuildapi="rm /www/htdocs/soap3/SevOneApi.php /www/htdocs/soap3/api.wsdl; SevOne-api-make-php; SevOne-api-make-wsdl; SevOne-api-change-ip 192.168.35.224; /etc/init.d/apache2 restart;"
+# }}}
+
 # {{{ Completion
 compctl -k "(add delete draft edit list import preview publish update)" nb
 # }}}
