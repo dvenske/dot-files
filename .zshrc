@@ -45,6 +45,7 @@ alias rm="rm -rf"
 # {{{ Git Aliases
 alias status="git status"
 alias pull="git pull"
+alias spull="git pull;/SevOneNMS/development/SevOne-install-internal"
 # }}}
 
 # {{{ SevOne Aliases
