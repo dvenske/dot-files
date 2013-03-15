@@ -339,3 +339,5 @@ setprompt
 # }}}
 # }}}
 
+cd /SevOneNMS
+
