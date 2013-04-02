@@ -342,4 +342,5 @@ setprompt
 # }}}
 
 cd /SevOneNMS
+git status
 
