@@ -226,3 +226,32 @@ snippet ae
 	$this->assertEqual( ${1}, ${2}, "${3}" );
 snippet v
 	var_dump( ${1} );
+snippet testClass
+	<?
+	require_once( 'autoload.inc' );
+
+	use \SevOne\testing\BaseTest as BaseTest;
+
+	class ${1}Test extends BaseTest {
+	
+		/**
+		 * Run all tests.
+		 **/
+		public function testSuite( $client ) {
+			return $this->doAuthTest( $client, function( $client ) {
+
+				return true;
+			} );
+		}
+
+		/**
+		 * ${2}
+		 **/
+		public function test${3}( $client ) {
+			return $this->doAuthTest( $client, function( $client ) {
+
+				return true;
+			} );
+		}
+	}
+	?>
