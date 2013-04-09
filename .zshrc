@@ -53,6 +53,7 @@ alias api="php /SevOneNMS/personal/mlittrell/api_test.php"
 alias rebuildapi="rm /www/htdocs/soap3/SevOneApi.php /www/htdocs/soap3/api.wsdl; SevOne-api-make-php; SevOne-api-make-wsdl; SevOne-api-change-ip 192.168.35.224; /etc/init.d/apache2 restart;"
 alias doms="cd /SevOneNMS/www/htdocs/doms"
 alias actions="cd /SevOneNMS/php/SevOne/actions"
+alias rebuildwizard="/SevOneNMS/development/SevOne-Compress-Wizard.sh"
 # }}}
 
 # {{{ Completion
