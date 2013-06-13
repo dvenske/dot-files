@@ -41,6 +41,11 @@ alias rcoffeelint="find . -name '*.coffee' | xargs coffeelint"
 alias todo="find . | xargs grep -is --color todo"
 alias rm="rm -rf"
 alias rebuild_ie_vms="curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | bash"
+
+alias mlittrell1="ssh root@192.168.35.223"
+alias mlittrell2="ssh root@192.168.35.224"
+alias mlittrell3="ssh root@192.168.35.225"
+alias mlittrell4="ssh root@192.168.35.226"
 # }}}
 
 # {{{ Git Aliases
