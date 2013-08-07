@@ -34,7 +34,7 @@ export LESS_TERMCAP_us=$'\E[1;32m'    # begin underline
 alias ..="cd .."
 alias ...="cd ../.."
 alias grep="grep --color=always"
-alias ls='pwd;ls -la'
+alias ls='pwd;ls -la --color'
 alias c='clear'
 alias rfind='find . | xargs grep -is --color'
 alias rcoffeelint="find . -name '*.coffee' | xargs coffeelint"
