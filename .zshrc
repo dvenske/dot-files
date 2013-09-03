@@ -36,7 +36,7 @@ alias ...="cd ../.."
 alias grep="grep --color=always"
 alias ls='pwd;ls -la --color'
 alias c='clear'
-alias rfind='find . | xargs grep -is --color'
+alias rfind="find . -not -name \"*-all.js\" |xargs grep -is --color"
 alias rcoffeelint="find . -name '*.coffee' | xargs coffeelint"
 alias todo="find . | xargs grep -is --color todo"
 alias rm="rm -rf"
