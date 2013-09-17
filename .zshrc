@@ -62,6 +62,7 @@ alias rebuildwizard="/SevOneNMS/development/SevOne-Compress-Wizard.sh"
 alias rebuildwizard-temp="cd /SevOneNMS/www/htdocs/doms/wizard/ && git checkout -- wiz.jsb3 && /opt/SenchaSDKTools-2.0.0-beta3/sencha build -v -p wiz.jsb3 -d . && git checkout -- development.php"
 alias cleanwizard="git checkout /SevOneNMS/www/htdocs/doms/wizard/all-classes.js /SevOneNMS/www/htdocs/doms/wizard/app-all.js /SevOneNMS/www/htdocs/doms/wizard/wiz.jsb3"
 alias rebuildapi="rm /www/htdocs/soap3/SevOneApi.php /www/htdocs/soap3/api.wsdl; SevOne-api-make-php; SevOne-api-make-wsdl; SevOne-api-change-ip 192.168.35.224; /etc/init.d/apache2 restart;"
+alias rebuildvm="SevOne-build --full -L"
 # }}}
 
 # {{{ Completion
