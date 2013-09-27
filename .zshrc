@@ -46,6 +46,11 @@ alias mlittrell1="ssh root@192.168.35.223"
 alias mlittrell2="ssh root@192.168.35.224"
 alias mlittrell3="ssh root@192.168.35.225"
 alias mlittrell4="ssh root@192.168.35.226"
+
+alias vm1="cd ~/mlittrell1"
+alias vm2="cd ~/mlittrell2"
+alias vm3="cd ~/mlittrell3"
+alias vm4="cd ~/mlittrell4"
 # }}}
 
 # {{{ Git Aliases
