@@ -8,6 +8,7 @@ set nocompatible
 set number
 set ruler
 set cursorline
+set cursorcolumn
 syntax on
 
 " Set encoding
