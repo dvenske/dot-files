@@ -2,15 +2,13 @@ escape ^]a
 
 bell_msg '^GBell in window %n'
 
-defscrollback 1000000
-
 shell -/bin/zsh
 
-screen -t editor
 screen -t shell
-screen -t jslint
-screen -t git
-screen -t top
+screen -t shell
+screen -t shell
+screen -t shell
+screen -t shell
 screen -t shell
 screen -t shell
 screen -t shell
