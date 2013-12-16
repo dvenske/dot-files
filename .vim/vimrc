@@ -4,6 +4,7 @@ if filereadable(expand("~/.vimrc.pre"))
 endif
 
 set nocompatible
+set mouse=a
 
 set number
 set ruler
