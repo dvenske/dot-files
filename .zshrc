@@ -36,7 +36,7 @@ alias ...="cd ../.."
 alias grep="grep --color=always"
 alias ls='pwd;ls -la --color'
 alias c='clear'
-alias rfind="find . -not -name \"*-all.js\" |xargs grep -nis --color"
+alias rfind="find . ! -name \"app-all.js\" ! -name \"all-classes.js\" ! -name \"jquery*.js\" ! -name \"ifx.js\" ! -path \"/SevOneNMS/www/htdocs/doms/include/\" -print0 |xargs -0 grep -ins --color=always"
 alias rcoffeelint="find . -name '*.coffee' | xargs coffeelint"
 alias todo="find . | xargs grep -is --color todo"
 alias rm="rm -rf"
