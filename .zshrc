@@ -61,6 +61,7 @@ alias spull="git pull --rebase;/SevOneNMS/development/SevOne-install-internal"
 # }}}
 
 # {{{ SevOne Aliases
+alias cc="SevOne-act check checkout"
 alias api="php /SevOneNMS/personal/mlittrell/api_test.php"
 alias doms="cd /SevOneNMS/www/htdocs/doms"
 alias actions="cd /SevOneNMS/php/SevOne/actions"
