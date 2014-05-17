@@ -14,7 +14,7 @@ fi
 
 # TODO check to see if zsh and git already exist
 # Get/set arguments -> flags
-while getopts ":z:" o; do
+while getopts ":z:g:" o; do
   case "${o}" in
     z)
       $z = true
