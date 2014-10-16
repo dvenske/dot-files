@@ -11,8 +11,8 @@ set mouse=a
 
 set number
 set ruler
-set cursorline
-set cursorcolumn
+" set cursorline " horizontal line
+" set cursorcolumn " vertical line
 syntax on
 
 " Set encoding
