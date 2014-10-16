@@ -117,7 +117,9 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color desert
+autocmd BufEnter * colorscheme default
+autocmd BufEnter *.js colorscheme distinguished
+autocmd BufEnter *.php colorscheme candystripe
 
 " Directories for swp files
 set backupdir=~/.vim/backup
