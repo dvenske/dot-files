@@ -3,6 +3,9 @@ if filereadable(expand("~/.vimrc.pre"))
   source ~/.vimrc.pre
 endif
 
+" Configure for 256 color use
+set t_Co=256
+
 set nocompatible
 set mouse=a
 
