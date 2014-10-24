@@ -42,27 +42,11 @@ alias todo="find . | xargs grep -is --color todo"
 alias rm="rm -rf"
 alias rebuild_ie_vms="curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | bash"
 alias tree="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
-
-alias mlittrell1="ssh root@192.168.35.223"
-alias mlittrell2="ssh root@192.168.35.224"
-alias mlittrell3="ssh root@192.168.35.225"
-alias mlittrell4="ssh root@192.168.35.226"
-
-alias vm1="cd ~/mlittrell1"
-alias vm2="cd ~/mlittrell2"
-alias vm3="cd ~/mlittrell3"
-alias vm4="cd ~/mlittrell4"
-# }}}
-
-# {{{ Git Aliases
-alias status="git status"
-alias pull="git pull --rebase"
-alias spull="git pull --rebase;/SevOneNMS/development/SevOne-install-internal"
 # }}}
 
 # {{{ SevOne Aliases
 alias cc="SevOne-act check checkout"
-alias api="php /SevOneNMS/personal/mlittrell/api_test.php"
+alias fresh="SevOne-act check freshness -a"
 alias doms="cd /SevOneNMS/www/htdocs/doms"
 alias actions="cd /SevOneNMS/php/SevOne/actions"
 alias rebuildwizard="/SevOneNMS/development/SevOne-Compress-Wizard.sh"
@@ -71,6 +55,10 @@ alias cleanwizard="git checkout /SevOneNMS/www/htdocs/doms/wizard/all-classes.js
 alias rebuildapi="rm /www/htdocs/soap3/SevOneApi.php /www/htdocs/soap3/api.wsdl; SevOne-api-make-php; SevOne-api-make-wsdl; SevOne-api-change-ip 192.168.35.224; /etc/init.d/apache2 restart;"
 alias rebuildvm="SevOne-build --full -L"
 alias rebuildall="SevOne-build external all -C;SevOne-build php all -C;SevOne-build external all -C;SevOne-build internal all -C;SevOne-build php all -C;SevOne-api-make;pkill SevOne; killall configshell messageswitch git;SevOne-act check checkout --report detail"
+
+alias status="git status"
+alias pull="git pull"
+alias spull="git pull;/SevOneNMS/development/SevOne-install-internal"
 # }}}
 
 # {{{ Completion
