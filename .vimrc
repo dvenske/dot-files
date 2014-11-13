@@ -125,8 +125,7 @@ autocmd BufEnter *.js colorscheme distinguished
 autocmd BufEnter *.php colorscheme candystripe
 
 " Directories for swp files
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
+set backupdir=~/tmp
 
 " Turn off jslint errors by default
 let g:JSLintHighlightErrorLine = 0
