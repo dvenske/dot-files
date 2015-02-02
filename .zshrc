@@ -37,10 +37,7 @@ alias grep="grep --color=always"
 alias ls='pwd;ls -la --color'
 alias c='clear'
 alias rfind="find . ! -name \"app-all.js\" ! -name \"all-classes.js\" ! -name \"jquery*.js\" ! -name \"ifx.js\" ! -path \"/SevOneNMS/www/htdocs/doms/include/\" -print0 |xargs -0 grep -ins --color=always"
-alias rcoffeelint="find . -name '*.coffee' | xargs coffeelint"
-alias todo="find . | xargs grep -is --color todo"
 alias rm="rm -rf"
-alias rebuild_ie_vms="curl -s https://raw.github.com/xdissent/ievms/master/ievms.sh | bash"
 alias tree="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
 # }}}
 
