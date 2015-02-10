@@ -38,12 +38,16 @@ alias ls='pwd;ls -la --color'
 alias c='clear'
 alias rfind="find . ! -name \"app-all.js\" ! -name \"all-classes.js\" ! -name \"jquery*.js\" ! -name \"ifx.js\" ! -path \"/SevOneNMS/www/htdocs/doms/include/\" -print0 |xargs -0 grep -ins --color=always"
 alias rm="rm -rf"
-alias tree="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
+# }}}
+
+# {{{ Git Aliases
+alias gtree="git log --graph --decorate --pretty=oneline --abbrev-commit --all"  
+alias gstatus="git status"
+alias gpull="git pull"
+alias glog="git log -p"
 # }}}
 
 # {{{ SevOne Aliases
-alias cc="SevOne-act check checkout"
-alias fresh="SevOne-act check freshness -a"
 alias doms="cd /SevOneNMS/www/htdocs/doms"
 alias actions="cd /SevOneNMS/php/SevOne/actions"
 alias rebuildwizard="/SevOneNMS/development/SevOne-Compress-Wizard.sh"
@@ -52,10 +56,6 @@ alias cleanwizard="git checkout /SevOneNMS/www/htdocs/doms/wizard/all-classes.js
 alias rebuildapi="rm /www/htdocs/soap3/SevOneApi.php /www/htdocs/soap3/api.wsdl; SevOne-api-make-php; SevOne-api-make-wsdl; SevOne-api-change-ip 192.168.35.224; /etc/init.d/apache2 restart;"
 alias rebuildvm="SevOne-build --full -L"
 alias rebuildall="SevOne-build external all -C;SevOne-build php all -C;SevOne-build external all -C;SevOne-build internal all -C;SevOne-build php all -C;SevOne-api-make;pkill SevOne; killall configshell messageswitch git;SevOne-act check checkout --report detail"
-
-alias status="git status"
-alias pull="git pull"
-alias spull="git pull;/SevOneNMS/development/SevOne-install-internal"
 # }}}
 
 # {{{ Completion
