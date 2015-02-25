@@ -43,7 +43,7 @@ alias rm="rm -rf"
 # {{{ Git Aliases
 alias gtree="git log --graph --decorate --pretty=oneline --abbrev-commit --all"  
 alias gstatus="git status"
-alias gpull="git pull"
+alias gpull="git pull --rebase"
 alias glog="git log -p"
 # }}}
 
