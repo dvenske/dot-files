@@ -1,150 +1,85 @@
-" Include user's local pre .vimrc config
-if filereadable(expand("~/.vimrc.pre"))
-  source ~/.vimrc.pre
-endif
-
-" Configure for 256 color use
-set t_Co=256
 
 set nocompatible
+
+" vundle section {{{
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+" my vundles
+Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'helino/vim-json'
+Bundle 'tpope/vim-surround'
+Bundle 'garbas/vim-snipmate'
+Bundle 'bling/vim-airline'
+Bundle 'jelera/vim-javascript-syntax'
+
+" Snipmate
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
+
+"vundle section }}}
+
+set t_Co=256
+syntax on
+set background=dark
+colorscheme desert
+
+" booya. persistent undo. what now
+set undodir=~/.cache/vim/undodir
+set undofile
+set undolevels=1000 "maximum number of changes that can be undone
+set undoreload=10000 "maximum number lines to save for undo on a buffer reload
+
+filetype on
+filetype plugin indent on
+set laststatus=2
+
+" yey mouse
 set mouse=a
 
-set number
-set ruler
-" set cursorline " horizontal line
-" set cursorcolumn " vertical line
-syntax on
-
-" Set encoding
-set encoding=utf-8
-
-" Whitespace stuff
+" indentation and comments
 set nowrap
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set list listchars=tab:\ \ ,trail:·
+set cindent
+set smartindent
+set autoindent
+set fo=rocqt
+set comments=sl:/**,mbr:\ *,erx:\ */
+set noexpandtab
+set foldmethod=marker
 
-" Searching
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
+" python doesnt like tabs
+autocmd FileType py set expandtab
 
-" Tab completion
-set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+" nginx stuf
+au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif 
 
-" Status bar
-set laststatus=2
 
-" Without setting this, ZoomWin restores windows in a way that causes
-" equalalways behavior to be triggered the next time CommandT is used.
-" This is likely a bludgeon to solve some other issue, but it works
-set noequalalways
+" c.vim settings
+let c_gnu = 1
+let c_vms = 1
+let c_C99 = 1
 
-" NERDTree configuration
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-map <Leader><Leader> :NERDTreeToggle<CR>
+" ctags.vim settings
+let g:ctags_path='/usr/bin/ctags'
+let g:ctags_statusline=1 
+let g:generate_tags=1
 
-" CTags
-map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
-map <C-\> :tnext<CR>
+" fancy powerline
+let g:Powerline_symbols = 'unicode'
 
-" Remember last location in file
-if has("autocmd")
-  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal g'\"" | endif
-endif
+" extra syntax application
+au BufNewFile,BufRead *.j set filetype=objj
 
-function s:setupWrapping()
-  set wrap
-  set wrapmargin=2
-  set textwidth=72
-endfunction
+" no clue
+set t_RV=
 
-function s:setupMarkup()
-  call s:setupWrapping()
-  map <buffer> <Leader>p :Hammer<CR>
-endfunction
-
-" md, markdown, and mk are markdown and define buffer-local preview
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
-
-" add json syntax highlighting
-au BufNewFile,BufRead *.json set ft=javascript
-
-au BufRead,BufNewFile *.txt call s:setupWrapping()
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
-" load the plugin and indent settings for the detected filetype
-filetype plugin indent on
-
-" Opens an edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>e
-map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
-
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
-" Inserts the path of the currently edited file into a command
-" Command mode: Ctrl+P
-cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
-
-" Unimpaired configuration
-" Bubble single lines
-nmap <C-Up> [e
-nmap <C-Down> ]e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-
-" Enable syntastic syntax checking
-let g:syntastic_enable_signs=1
-let g:syntastic_quiet_warnings=1
-
-" gist-vim defaults
-if has("mac")
-  let g:gist_clip_command = 'pbcopy'
-elseif has("unix")
-  let g:gist_clip_command = 'xclip -selection clipboard'
-endif
-let g:gist_detect_filetype = 1
-let g:gist_open_browser_after_post = 1
-
-" Use modeline overrides
-set modeline
-set modelines=10
-
-" Default color scheme
-autocmd BufEnter * colorscheme default
-autocmd BufEnter *.js colorscheme distinguished
-autocmd BufEnter *.php colorscheme candystripe
-
-" Directories for swp files
-set backupdir=~/tmp
-
-" Turn off jslint errors by default
-let g:JSLintHighlightErrorLine = 0
-
-" MacVIM shift+arrow-keys behavior (required in .vimrc)
-let macvim_hig_shift_movement = 1
-
-" % to bounce from do to end etc.
-runtime! macros/matchit.vim
-
-" Show (partial) command in the status line
-set showcmd
-
-if has("gui_running")
-  " Automatically resize splits when resizing MacVim window
-  autocmd VimResized * wincmd =
-endif
-
-" Include user's local vim config
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
-endif
+" }}}
