@@ -9,7 +9,6 @@ Bundle 'gmarik/vundle'
 " my vundles
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
-Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'helino/vim-json'
 Bundle 'tpope/vim-surround'
 Bundle 'garbas/vim-snipmate'
@@ -24,12 +23,11 @@ Bundle "honza/vim-snippets"
 
 "vundle section }}}
 
-set t_Co=256
 set number
 set ruler
 syntax on
+colorscheme desert256
 set background=dark
-colorscheme desert
 
 " booya. persistent undo. what now
 set undodir=~/.cache/vim/undodir
