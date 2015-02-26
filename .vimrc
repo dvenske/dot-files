@@ -23,10 +23,11 @@ Bundle "honza/vim-snippets"
 
 "vundle section }}}
 
+syntax on
 set number
 set ruler
-syntax on
-colorscheme desert256
+set t_Co=256
+colorscheme desert
 set background=dark
 
 " booya. persistent undo. what now
@@ -67,23 +68,28 @@ autocmd FileType py set expandtab
 " nginx stuf
 au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif 
 
-" c.vim settings
-let c_gnu = 1
-let c_vms = 1
-let c_C99 = 1
-
-" ctags.vim settings
-let g:ctags_path='/usr/bin/ctags'
-let g:ctags_statusline=1 
-let g:generate_tags=1
-
-" fancy powerline
-let g:Powerline_symbols = 'unicode'
-
 " extra syntax application
 au BufNewFile,BufRead *.j set filetype=objj
 
 " no clue
 set t_RV=
+
+" {{{ Airline Config
+if(!exists('g:airline_symbols')
+	let g:airline_symbols = {}
+endif
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+" }}}
 
 " }}}
