@@ -1,4 +1,3 @@
-
 set nocompatible
 
 " vundle section {{{
@@ -26,6 +25,8 @@ Bundle "honza/vim-snippets"
 "vundle section }}}
 
 set t_Co=256
+set number
+set ruler
 syntax on
 set background=dark
 colorscheme desert
@@ -45,8 +46,14 @@ set mouse=a
 
 " indentation and comments
 set nowrap
+
+" Sets how many columns a tab counts for
 set tabstop=4
+
+" Sets how many columns >> and << count for
 set shiftwidth=4
+
+" Sets how many columns a tab counts for when in insert mode
 set softtabstop=4
 set cindent
 set smartindent
@@ -61,7 +68,6 @@ autocmd FileType py set expandtab
 
 " nginx stuf
 au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif 
-
 
 " c.vim settings
 let c_gnu = 1

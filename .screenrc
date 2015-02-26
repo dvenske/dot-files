@@ -10,8 +10,11 @@ screen -t shell
 screen -t shell
 screen -t shell
 screen -t shell
+screen -t shell
+screen -t shell
+screen -t shell
+screen -t shell
 select 1
-select 0
 
 startup_message off
 hardstatus alwayslastline
