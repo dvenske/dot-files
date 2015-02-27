@@ -10,10 +10,11 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/syntastic'
 Bundle 'tpope/vim-fugitive'
 Bundle 'helino/vim-json'
-Bundle 'tpope/vim-surround'
 Bundle 'garbas/vim-snipmate'
 Bundle 'bling/vim-airline'
+Bundle 'Raimondi/delimitMate'
 Bundle 'jelera/vim-javascript-syntax'
+Bundle 'Lokaltog/vim-distinguished'
 
 " Snipmate
 Bundle "MarcWeber/vim-addon-mw-utils"
@@ -27,7 +28,7 @@ syntax on
 set number
 set ruler
 set t_Co=256
-colorscheme desert
+colorscheme distinguished
 set background=dark
 
 " booya. persistent undo. what now
@@ -45,6 +46,9 @@ set mouse=a
 
 " indentation and comments
 set nowrap
+
+" highlight cursor
+set hlsearch
 
 " Sets how many columns a tab counts for
 set tabstop=4
@@ -75,7 +79,7 @@ au BufNewFile,BufRead *.j set filetype=objj
 set t_RV=
 
 " {{{ Airline Config
-if(!exists('g:airline_symbols')
+if(!exists('g:airline_symbols'))
 	let g:airline_symbols = {}
 endif
 let g:airline_left_sep = '»'
