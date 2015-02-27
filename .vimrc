@@ -14,6 +14,8 @@ Bundle 'garbas/vim-snipmate'
 Bundle 'bling/vim-airline'
 Bundle 'Raimondi/delimitMate'
 Bundle 'jelera/vim-javascript-syntax'
+Bundle 'pangloss/vim-javascript'
+Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Lokaltog/vim-distinguished'
 
 " Snipmate
@@ -28,8 +30,8 @@ syntax on
 set number
 set ruler
 set t_Co=256
-colorscheme distinguished
 set background=dark
+colorscheme distinguished
 
 " booya. persistent undo. what now
 set undodir=~/.cache/vim/undodir
