@@ -1,9 +1,8 @@
-set nocompatible
-
 " vundle section {{{
+set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 Bundle 'gmarik/vundle'
 
 " my vundles
@@ -24,6 +23,9 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
 
+call vundle#end()
+filetype plugin indent on
+filetype on
 "vundle section }}}
 
 syntax on
@@ -39,8 +41,6 @@ set undofile
 set undolevels=1000 "maximum number of changes that can be undone
 set undoreload=10000 "maximum number lines to save for undo on a buffer reload
 
-filetype on
-filetype plugin indent on
 set laststatus=2
 
 " yey mouse
