@@ -77,6 +77,14 @@ au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfil
 " extra syntax application
 au BufNewFile,BufRead *.j set filetype=objj
 
+" highlight trailing whitespace
+highlight TrailingWhiteSpace ctermbg=red ctermfg=white
+match TrailingWhiteSpace / \+$/
+
+" kill trailing white space on php, js files
+autocmd BufWritePre *.php :%s/\s\+$//e
+autocmd BufWritePre *.js :%s/\s\+$//e
+
 " no clue
 set t_RV=
 
