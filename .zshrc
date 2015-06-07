@@ -31,17 +31,17 @@ export LESS_TERMCAP_us=$'\E[1;32m'    # begin underline
 # }}}
 
 # {{{ Aliases
-alias ..="cd .."
-alias ...="cd ../.."
-alias grep="grep --color=always"
-alias ls='pwd;ls -la --color'
+alias ..="cd ../"
+alias ...="cd ../../"
+alias ....="cd ../../../"
 alias c='clear'
-alias rfind="find . ! -name \"app-all.js\" ! -name \"all-classes.js\" ! -name \"jquery*.js\" ! -name \"ifx.js\" ! -path \"/SevOneNMS/www/htdocs/doms/include/\" -print0 |xargs -0 grep -ins --color=always"
+alias ls='pwd;ls -la --color'
 alias rm="rm -rf"
+alias grep="grep --color=always"
 # }}}
 
 # {{{ Git Aliases
-alias gtree="git log --graph --decorate --pretty=oneline --abbrev-commit --all"  
+alias gtree="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
 alias gstatus="git status"
 alias gpull="git pull --rebase"
 alias glog="git log -p"
