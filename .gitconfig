@@ -1,0 +1,15 @@
+[user]
+	name = Mike Littrell
+	email = mike.littrell@returnpath.com
+[alias]
+	tree = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	codereview = push origin HEAD:refs/for/master
+	vimdiff = difftool -y -t vimdiff
+	sm = submodule update --init --recursive
+	st = status
+	co = checkout
+	lg = log -p
+[color]
+	diff = auto
+	status = auto
+	log = auto
