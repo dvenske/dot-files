@@ -41,21 +41,6 @@ alias grep="grep --color=always"
 alias cleanswa='find . -name "*.sw*" -type f -delete'
 # }}}
 
-# {{{ Git Aliases
-alias gtree="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
-# }}}
-
-# {{{ SevOne Aliases
-alias doms="cd /SevOneNMS/www/htdocs/doms"
-alias actions="cd /SevOneNMS/php/SevOne/actions"
-alias rebuildwizard="/SevOneNMS/development/SevOne-Compress-Wizard.sh"
-alias rebuildwizard-temp="cd /SevOneNMS/www/htdocs/doms/wizard/ && git checkout -- wiz.jsb3 && /opt/SenchaSDKTools-2.0.0-beta3/sencha build -v -p wiz.jsb3 -d . && git checkout -- development.php"
-alias cleanwizard="git checkout /SevOneNMS/www/htdocs/doms/wizard/all-classes.js /SevOneNMS/www/htdocs/doms/wizard/app-all.js /SevOneNMS/www/htdocs/doms/wizard/wiz.jsb3"
-alias rebuildapi="rm /www/htdocs/soap3/SevOneApi.php /www/htdocs/soap3/api.wsdl; SevOne-api-make-php; SevOne-api-make-wsdl; SevOne-api-change-ip 192.168.35.224; /etc/init.d/apache2 restart;"
-alias rebuildvm="SevOne-build --full -L"
-alias rebuildall="SevOne-build external all -C;SevOne-build php all -C;SevOne-build external all -C;SevOne-build internal all -C;SevOne-build php all -C;SevOne-api-make;pkill SevOne; killall configshell messageswitch git;SevOne-act check checkout --report detail"
-# }}}
-
 # {{{ Completion
 compctl -k "(add delete draft edit list import preview publish update)" nb
 # }}}
