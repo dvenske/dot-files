@@ -52,20 +52,11 @@ set nowrap
 " highlight cursor
 set hlsearch
 
-" Sets how many columns a tab counts for
-set tabstop=4
+" Sets tabs
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab autoindent cindent
 
-" Sets how many columns >> and << count for
-set shiftwidth=4
-
-" Sets how many columns a tab counts for when in insert mode
-set softtabstop=4
-set cindent
-set smartindent
-set autoindent
 set fo=rocqt
 set comments=sl:/**,mbr:\ *,erx:\ */
-set noexpandtab
 set foldmethod=marker
 
 " python doesnt like tabs
