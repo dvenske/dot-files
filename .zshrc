@@ -38,13 +38,11 @@ alias c='clear'
 alias ls='pwd;ls -la --color'
 alias rm="rm -rf"
 alias grep="grep --color=always"
+alias cleanswa='find . -name "*.sw*" -type f -delete'
 # }}}
 
 # {{{ Git Aliases
 alias gtree="git log --graph --decorate --pretty=oneline --abbrev-commit --all"
-alias gstatus="git status"
-alias gpull="git pull --rebase"
-alias glog="git log -p"
 # }}}
 
 # {{{ SevOne Aliases
