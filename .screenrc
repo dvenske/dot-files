@@ -1,7 +1,5 @@
 escape ^]a
 
-bell_msg '^GBell in window %n'
-
 shell -/bin/zsh
 
 screen -t shell
