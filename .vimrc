@@ -57,7 +57,6 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab autoindent cindent
 
 set fo=rocqt
 set comments=sl:/**,mbr:\ *,erx:\ */
-set foldmethod=marker
 
 " python doesnt like tabs
 autocmd FileType py set expandtab
