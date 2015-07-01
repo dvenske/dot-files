@@ -15,12 +15,7 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Lokaltog/vim-distinguished'
-
-" Snipmate
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
 
 call vundle#end()
 filetype plugin indent on
@@ -35,7 +30,6 @@ set background=dark
 colorscheme distinguished
 
 set undolevels=1000 "maximum number of changes that can be undone
-
 
 set laststatus=2
 
