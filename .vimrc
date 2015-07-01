@@ -16,6 +16,8 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Lokaltog/vim-distinguished'
 Bundle "garbas/vim-snipmate"
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
 
 call vundle#end()
 filetype plugin indent on
