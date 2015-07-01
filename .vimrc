@@ -1,6 +1,6 @@
 " vundle section {{{
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+set runtimepath+=~/.vim/snippets,~/.vim/bundle/Vundle.vim,~/.vim/bundle/vim-snipmate,~/.vim/bundle/vim-snipmate/after
 call vundle#begin()
 Bundle 'gmarik/vundle'
 
