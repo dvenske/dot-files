@@ -1,6 +1,6 @@
 " vundle section {{{
 filetype off
-set runtimepath+=~/.vim/snippets,~/.vim/bundle/Vundle.vim,~/.vim/bundle/vim-snipmate,~/.vim/bundle/vim-snipmate/after
+set runtimepath+=~/.vim/snippets,~/.vim/bundle/Vundle.vim,~/.vim/bundle/vim-snippets,~/.vim/bundle/vim-snippets/after
 call vundle#begin()
 Bundle 'gmarik/vundle'
 
@@ -14,9 +14,10 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'pangloss/vim-javascript'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'Lokaltog/vim-distinguished'
-Bundle "garbas/vim-snipmate"
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
 
 call vundle#end()
 filetype plugin indent on
