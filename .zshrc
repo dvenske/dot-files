@@ -120,6 +120,9 @@ alias ls='pwd;ls -la --color'
 alias rm="rm -rf"
 alias grep="grep --color=always"
 alias cleanswa='find . -name "*.sw*" -type f -delete'
+
+alias go-emt="~/repos/monitor"
+alias go-dashboard="~/repos/monitor/src/documentroot/dashboard3"
 # }}}
 
 # {{{ Completion
