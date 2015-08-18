@@ -1,6 +1,6 @@
 # -*- shell-script -*-
 
-# {{{ User settings
+plugins=()
 
 # {{{ Environment
 export HISTFILE="${HOME}/.zsh_history"
@@ -326,7 +326,3 @@ $PR_GREEN$PR_SHIFT_IN$PR_LLCORNER$PR_GREEN$PR_HBAR$PR_SHIFT_OUT(\
 setprompt
 # }}}
 # }}}
-
-cd /SevOneNMS
-git status
-
