@@ -109,3 +109,8 @@ function backward-kill-partial-word {
     local WORDCHARS="${WORDCHARS//[\/.]/}"
     zle backward-kill-word "$@"
 }
+
+function chpwd() {
+    emulate -LR zsh
+    ls -la
+}
