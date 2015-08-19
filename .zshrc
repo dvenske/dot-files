@@ -33,17 +33,16 @@ export LESS_TERMCAP_us=$'\E[1;32m'    # begin underline
 # }}}
 
 # {{{ Aliases
-alias ..="cd ../"
-alias ...="cd ../../"
-alias ....="cd ../../../"
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
 alias c='clear'
 alias ls='pwd;ls -la --color'
-alias rm="rm -rf"
-alias grep="grep --color=always"
+alias rm='rm -rf'
+alias grep='grep --color=always'
 alias cleanswa='find . -name "*.sw*" -type f -delete'
-
-alias go-emt="~/repos/monitor"
-alias go-dashboard="~/repos/monitor/src/documentroot/dashboard3"
+alias go-emt='cd ~/repos/monitor'
+alias go-dashboard='cd ~/repos/monitor/src/documentroot/dashboard3'
 # }}}
 
 # {{{ Completion
