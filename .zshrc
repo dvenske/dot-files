@@ -47,6 +47,7 @@ alias go-dashboard='cd ~/repos/monitor/src/documentroot/dashboard3'
 
 alias docker-api='sudo docker exec -ti api.lan bash'
 alias docker-monitor='sudo docker exec -ti monitor bash'
+alias docker-logs='sudo docker exec -ti syslogweb bash'
 # }}}
 
 # {{{ Completion
