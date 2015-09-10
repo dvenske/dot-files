@@ -42,7 +42,8 @@ alias rm='rm -rf'
 alias grep='grep --color=always'
 alias cleanswa='find . -name "*.sw*" -type f -delete'
 
-alias go-emt='cd ~/repos/monitor'
+alias go-emt='cd ~/repos/monitor/src'
+alias go-rep='cd ~/repos/monitor/src/documentroot/rep'
 alias go-dashboard='cd ~/repos/monitor/src/documentroot/dashboard3'
 
 alias docker-api='sudo docker exec -ti api.lan bash'
