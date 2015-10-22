@@ -14,6 +14,7 @@ export PAGER="less"
 export READNULLCMD="${PAGER}"
 export BROWSER="chrome"
 export XTERM="urxvtc"
+export EDITOR="vim"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export LD_LIBRARY_PATH=/usr/local/lib:/opt/local/lib
 export C_INCLUDE_PATH=/usr/local/include:/opt/local/include

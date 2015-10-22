@@ -1,6 +1,8 @@
 " vundle section {{{
 filetype off
-set runtimepath+=~/.vim/snippets,~/.vim/bundle/Vundle.vim,~/.vim/bundle/vim-snippets,~/.vim/bundle/vim-snippets/after
+" TODO vim-snippets was someone elses project; just use ~/.vim/snippets and build
+" up my own snippets
+set runtimepath+=~/.vim/snippets,~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Bundle 'gmarik/vundle'
 
@@ -17,7 +19,7 @@ Bundle 'Lokaltog/vim-distinguished'
 Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
+Bundle 'airblade/vim-gitgutter'
 
 call vundle#end()
 filetype plugin indent on
@@ -36,7 +38,11 @@ set undolevels=1000 "maximum number of changes that can be undone
 set laststatus=2
 
 " yey mouse
-set mouse=a
+set mouse+=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
 
 " indentation and comments
 set nowrap
@@ -54,7 +60,7 @@ set comments=sl:/**,mbr:\ *,erx:\ */
 autocmd FileType py set expandtab
 
 " nginx stuf
-au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif 
+au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
 
 " extra syntax application
 au BufNewFile,BufRead *.j set filetype=objj
@@ -63,12 +69,9 @@ au BufNewFile,BufRead *.j set filetype=objj
 highlight TrailingWhiteSpace ctermbg=red ctermfg=white
 match TrailingWhiteSpace / \+$/
 
-" kill trailing white space on php, js files
+" remove trailing white space on php, js files
 autocmd BufWritePre *.php :%s/\s\+$//e
 autocmd BufWritePre *.js :%s/\s\+$//e
-
-" no clue
-set t_RV=
 
 " {{{ Airline Config
 if(!exists('g:airline_symbols'))
