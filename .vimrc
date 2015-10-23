@@ -20,6 +20,7 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'Yggdroot/indentLine'
 
 call vundle#end()
 filetype plugin indent on
