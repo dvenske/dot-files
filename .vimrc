@@ -20,7 +20,6 @@ Bundle 'MarcWeber/vim-addon-mw-utils'
 Bundle 'tomtom/tlib_vim'
 Bundle 'garbas/vim-snipmate'
 Bundle 'airblade/vim-gitgutter'
-Bundle 'Yggdroot/indentLine'
 
 call vundle#end()
 filetype plugin indent on
@@ -73,6 +72,13 @@ match TrailingWhiteSpace / \+$/
 " remove trailing white space on php, js files
 autocmd BufWritePre *.php :%s/\s\+$//e
 autocmd BufWritePre *.js :%s/\s\+$//e
+
+" {{{ Indent guide config
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=darkgrey ctermbg=234
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=lightgrey ctermbg=235
+" }}}
 
 " {{{ Airline Config
 if(!exists('g:airline_symbols'))
