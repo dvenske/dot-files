@@ -1,0 +1,64 @@
+" vundle section {{{
+filetype off
+" TODO vim-snippets was someone elses project; just use ~/.vim/snippets and build
+" up my own snippets
+set runtimepath+=~/.vim/snippets,~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Bundle 'gmarik/vundle'
+
+" my vundles
+Bundle 'scrooloose/syntastic'
+Bundle 'helino/vim-json'
+Bundle 'Raimondi/delimitMate'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'pangloss/vim-javascript'
+Bundle 'Lokaltog/vim-distinguished'
+
+call vundle#end()
+filetype plugin indent on
+filetype on
+"vundle section }}}
+
+syntax on
+set number
+set ruler
+set t_Co=256
+set background=dark
+colorscheme distinguished
+
+set undolevels=1000 "maximum number of changes that can be undone
+
+set laststatus=2
+
+" yey mouse
+set mouse+=a
+if &term =~ '^screen'
+    " tmux knows the extended mouse mode
+    set ttymouse=xterm2
+endif
+
+" indentation and comments
+set nowrap
+
+" highlight cursor
+set hlsearch
+
+" Sets tabs
+set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab autoindent cindent
+
+set fo=rocqt
+set comments=sl:/**,mbr:\ *,erx:\ */
+
+" python doesnt like tabs
+autocmd FileType py set expandtab
+
+" extra syntax application
+au BufNewFile,BufRead *.j set filetype=objj
+
+" highlight trailing whitespace
+highlight TrailingWhiteSpace ctermbg=red ctermfg=white
+match TrailingWhiteSpace / \+$/
+
+" remove trailing white space on php, js files
+autocmd BufWritePre *.php :%s/\s\+$//e
+autocmd BufWritePre *.js :%s/\s\+$//e
