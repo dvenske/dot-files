@@ -42,6 +42,7 @@ alias ls='pwd;ls -la --color'
 alias rm='rm -rf'
 alias grep='grep --color=always'
 alias cleanswa='find . -name "*.sw*" -type f -delete'
+alias attach='tmux -2 attach-session -t 0'
 
 alias go-emt='cd ~/repos/monitor/src'
 alias go-rep='cd ~/repos/monitor/src/documentroot/rep'
@@ -50,6 +51,8 @@ alias go-dashboard='cd ~/repos/monitor/src/documentroot/dashboard3'
 alias docker-api='sudo docker exec -ti api.lan bash'
 alias docker-monitor='sudo docker exec -ti monitor bash'
 alias docker-logs='sudo docker exec -ti syslogweb bash'
+
+alias cgulp="docker run -ti --rm --name wp-build -v $PWD:/usr/src/app -w /usr/src/app docker-registry.returnpath.net:443/devel/wp_build_tools:v0.0.1 gulp"
 # }}}
 
 # {{{ Completion
@@ -121,3 +124,6 @@ function chpwd() {
     emulate -LR zsh
     ls -la
 }
+
+export NVM_DIR="/home/mlittrell/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
