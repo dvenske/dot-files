@@ -2,7 +2,6 @@
 export ZSH=/home/mlittrell/.oh-my-zsh
 ZSH_THEME="avit"
 plugins=(git)
-export PATH="/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/bin:/usr/local/graphviz-2.14/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/bin:/usr/local/graphviz-2.14/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/mlittrell/.local/bin:/home/mlittrell/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/bin:/usr/local/graphviz-2.14/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/bin:/usr/local/graphviz-2.14/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/mlittrell/.local/bin:/home/mlittrell/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/bin:/usr/local/graphviz-2.14/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/bin:/usr/local/graphviz-2.14/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/mlittrell/.local/bin:/home/mlittrell/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/bin:/usr/local/graphviz-2.14/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/bin:/usr/local/graphviz-2.14/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/mlittrell/.local/bin:/home/mlittrell/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/bin:/usr/local/graphviz-2.14/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/bin:/usr/local/graphviz-2.14/bin:/opt/local/Library/Frameworks/Python.framework/Versions/2.6/bin:/opt/local/bin:/usr/local/graphviz-2.14/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/mlittrell/.local/bin:/home/mlittrell/bin"
 source $ZSH/oh-my-zsh.sh
 
 # {{{ Environment
@@ -13,7 +12,6 @@ export LESSHISTFILE="-"
 export PAGER="less"
 export READNULLCMD="${PAGER}"
 export BROWSER="chrome"
-export XTERM="urxvtc"
 export EDITOR="vim"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export LD_LIBRARY_PATH=/usr/local/lib:/opt/local/lib
@@ -75,8 +73,6 @@ setopt nobeep
 bindkey -e # emacs
 bindkey "\e[A" up-line-or-search
 bindkey "\e[B" down-line-or-search
-zle -N backward-kill-partial-word
-bindkey '^x/' backward-kill-partial-word
 
 # Prompt requirements
 setopt extended_glob prompt_subst
@@ -114,16 +110,6 @@ zstyle ':vcs_info:[svn]' format '[%c %b%u]'
 zstyle ':vcs_info:*' enable bzr git svn
 
 # }}}
-
-function backward-kill-partial-word {
-    local WORDCHARS="${WORDCHARS//[\/.]/}"
-    zle backward-kill-word "$@"
-}
-
-function chpwd() {
-    emulate -LR zsh
-    ls -la
-}
 
 export NVM_DIR="/home/mlittrell/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
