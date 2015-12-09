@@ -1,7 +1,9 @@
-# Path to your oh-my-zsh installation.
-export ZSH=/home/mlittrell/.oh-my-zsh
+# Path to your oh-my-zsh installation. Basically most of this came from
+# the .zshrc file that is created when oh my zsh is installed.
+export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="avit"
 plugins=(git)
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 source $ZSH/oh-my-zsh.sh
 
 # {{{ Environment
