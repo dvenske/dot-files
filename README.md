@@ -1,7 +1,8 @@
-Setup
+From terminal in home dir, run
+    git clone https://github.com/mlittrell/Dot-Files.git
 
-Run
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+From home, run
+    sh Dot-Files/setup.sh
 
-Then (from vim)
-:BundleInstall
+From vim, run
+    :BundleInstall
