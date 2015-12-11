@@ -79,6 +79,11 @@ setopt nobeep
 bindkey -e # emacs
 bindkey "\e[A" up-line-or-search
 bindkey "\e[B" down-line-or-search
+bindkey "${terminfo[khome]}" beginning-of-line
+bindkey "${terminfo[kend]}" end-of-line
+bindkey "\e[1~" beginning-of-line
+bindkey "\e[4~" end-of-line
+
 
 # Prompt requirements
 setopt extended_glob prompt_subst
